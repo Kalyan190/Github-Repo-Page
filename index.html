@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile and Repositories</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="profile">
+        <div class="avatar-img">
+            <div class="border-image-clip-path">
+                <img id="avatar" alt="GitHub Avatar">
+            </div>
+            
+            <a href="https/github.com" id="github-id">Github id</a>
+        </div>
+        
+        <div class="user-info">
+            <h2 id="name"></h2>
+             <p id="bio"></p>
+           
+             <div id="userInput">
+                <input type="text" id="githubUsername" placeholder="Enter GitHub username">
+                <button onclick="fetchUserProfile()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="all-repo">
+        <div id="repositories">
+            <div class="loader"></div>
+        </div>
+    </div>
+   
+    <hr>
+
+    <div id="pagination"></div>
+
+
+     <div class="bottom">
+        <div class="page">
+            <div class="num">
+                <span onclick="changePage(1)"><<</span>
+                <!-- Use a loop to generate page numbers -->
+                <span onclick="changePage(1)" class="active">1</span>
+                <span onclick="changePage(2)">2</span>
+                <span onclick="changePage(3)">3</span>
+                <span onclick="changePage(4)">4</span>
+                <span onclick="changePage(5)">5</span>
+                <!-- Add more spans as needed -->
+                <span onclick="changePage(6)">6</span>
+                <span onclick="changePage(7)">7</span>
+                <span onclick="changePage(8)">8</span>
+                <span onclick="changePage(9)">9</span>
+                <span onclick="changePage(10)">>></span>
+            </div>
+
+            <div class="button-section">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
